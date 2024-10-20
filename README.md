@@ -1,10 +1,5 @@
-# Hybrid Solver for Reactive Flows
-This is the source code repository for the Data-Centric Engineering paper "Incomplete to complete multiphysics forecasting - a hybrid approach for learning unknown phenomena" by Nilam Tathawadekar, Nguyen Anh Khoa Doan, Camilo F. Silva, Nils Thuerey: 
-[Full Paper](https://www.cambridge.org/core/journals/data-centric-engineering/article/incomplete-to-complete-multiphysics-forecasting-a-hybrid-approach-for-learning-unknown-phenomena/23CEF49F19D602E5D7D86FFB9587B259#)
+# Hybrid solution for Reactive Flows
 
-
-# Abstract:
-Modeling complex dynamical systems with only partial knowledge of their physical mechanisms is a crucial problem across all scientific and engineering disciplines. Purely data-driven approaches, which only make use of an artificial neural network and data, often fail to accurately simulate the evolution of the system dynamics over a sufficiently long time and in a physically consistent manner. Therefore, we propose a hybrid approach that uses a neural network model in combination with an incomplete partial differential equations (PDE) solver that provides known, but incomplete physical information. In this study, we demonstrate that the results obtained from the incomplete PDEs can be efficiently corrected at every time step by the proposed hybrid neural network – PDE solver model, so that the effect of the unknown physics present in the system is correctly accounted for. For validation purposes, the obtained simulations of the hybrid model are successfully compared against results coming from the complete set of PDEs describing the full physics of the considered system. We demonstrate the validity of the proposed approach on a reactive flow, an archetypal multi-physics system that combines fluid mechanics and chemistry, the latter being the physics considered unknown. Experiments are made on planar and Bunsen-type flames at various operating conditions. The hybrid neural network - PDE approach correctly models the flame evolution of the cases under study for significantly long time windows, yields improved generalization, and allows for larger simulation time steps. 
 
 # Tutorial
 ### Requirements
@@ -47,15 +42,7 @@ Given the initial conditions for temperature and mass fraction fields, it predic
 
 The codes related to the baseline method of purely data-driven (PDD) approach discussed in our paper are also included for each scenario in the respective directory. The PDD model can be trained and tested using *-pdd-* commands in respective makefiles.  
 
-# Closing Remarks
-If you find the approach useful, please cite our paper via:
-```
-@article{tathawadekar2022incomplete,
-  title={Incomplete to complete multiphysics forecasting-a hybrid approach for learning unknown phenomena},
-  author={Tathawadekar, Nilam Nandkishor and Doan, Nguyen Anh Khoa and Silva, Camilo Fernando and Thuerey, Nils},
-  year={2022}
-}
-```
+
 This work was supported by the ERC Consolidator Grant SpaTe (CoG-2019-863850).
 
 Here is a visualization of different flame dynamics predicted using the hybrid NN-PDE approach.
